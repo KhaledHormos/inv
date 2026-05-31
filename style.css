@@ -1,0 +1,95 @@
+:root {
+  --gold: #d4af37;
+}
+
+body {
+  background: linear-gradient(135deg, #1a0033, #330033);
+  font-family: 'Georgia', serif;
+  overflow: hidden;
+}
+
+.elegant-font {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+}
+
+.wedding-card {
+  width: 100%;
+  max-width: 900px;
+  height: 520px;
+  perspective: 2000px;
+  position: relative;
+}
+
+.card-cover, .card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transition: all 1.2s cubic-bezier(0.7, 0, 0.3, 1);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-cover {
+  background: linear-gradient(135deg, #4a1d2e, #2c0f1f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border: 12px solid #d4af37;
+}
+
+.cover-content {
+  color: white;
+}
+
+.couple-names {
+  font-size: 2.8rem;
+  color: var(--gold);
+  margin: 15px 0;
+}
+
+.card-inner {
+  background: #f8f1e9;
+  color: #333;
+  transform: rotateY(180deg);
+  display: none;
+  border: 12px solid #d4af37;
+}
+
+.left-page, .right-page {
+  padding: 40px 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left-page {
+  background: linear-gradient(to right, #f8f1e9, #f0e6d9);
+  border-right: 3px solid #d4af37;
+}
+
+.right-page {
+  background: linear-gradient(to left, #f8f1e9, #f0e6d9);
+}
+
+.page-content h2 {
+  color: #4a1d2e;
+  font-size: 2rem;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+/* Open Animation */
+.wedding-card.open .card-cover {
+  transform: rotateY(-180deg);
+}
+
+.wedding-card.open .card-inner {
+  transform: rotateY(0deg);
+  display: flex;
+}
