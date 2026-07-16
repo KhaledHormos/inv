@@ -1,4 +1,4 @@
-<script>
+
 // Wedding Date: 14 August 2026
 const weddingDate = new Date("2026-08-14T00:00:00").getTime();
 
@@ -28,4 +28,3 @@ function updateCountdown() {
 // Update every second
 setInterval(updateCountdown, 1000);
 updateCountdown(); // Initial call
-</script>
